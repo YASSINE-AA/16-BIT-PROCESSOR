@@ -1,0 +1,67 @@
+# Loading project PROCESSEUR
+# Compile of ALU.vhd was successful.
+# Compile of ALUtest.vhd was successful.
+# Compile of bascule.vhd was successful.
+# Compile of Control.vhd was successful.
+# Compile of controlTest.vhd was successful.
+# Compile of Mux1.vhd was successful.
+# Compile of Mux2.vhd was successful.
+# Compile of proc_test.vhd was successful.
+# Compile of Processeur.vhd was successful.
+# Compile of Register.vhd was successful.
+# Compile of RegisterTest.vhd was successful.
+# 11 compiles, 0 failed with no errors.
+vsim work.proc_test
+# vsim work.proc_test 
+# Start time: 17:19:13 on May 01,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.proc_test(arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.proc(arch)
+# Loading work.instr_reg(arch)
+# Loading work.status_reg(arch)
+# Loading work.reg_file(arch)
+# Loading work.mux_1(arch)
+# Loading work.mux_2(arch)
+# Loading work.bascule(arch)
+# Loading work.alu(behavioral)
+# Loading work.control(arch)
+add wave -position insertpoint  \
+sim:/proc_test/done \
+sim:/proc_test/passed \
+sim:/proc_test/ok \
+sim:/proc_test/clk \
+sim:/proc_test/rst \
+sim:/proc_test/ram_addr \
+sim:/proc_test/ram_din \
+sim:/proc_test/ram_dout \
+sim:/proc_test/ram_we
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yassine-ahmed-ali  Hostname: overflowtn  ProcessID: 19293
+#           Attempting to use alternate WLF file "./wlftM5CRR2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftM5CRR2
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /proc_test/proc_0/p3
+# Compile of ALU.vhd was successful.
+# Compile of ALUtest.vhd was successful.
+# Compile of bascule.vhd was successful.
+# Compile of Control.vhd was successful.
+# Compile of controlTest.vhd was successful.
+# Compile of Mux1.vhd was successful.
+# Compile of Mux2.vhd was successful.
+# Compile of proc_test.vhd was successful.
+# Compile of Processeur.vhd was successful.
+# Compile of Register.vhd was successful.
+# Compile of RegisterTest.vhd was successful.
+# 11 compiles, 0 failed with no errors.
