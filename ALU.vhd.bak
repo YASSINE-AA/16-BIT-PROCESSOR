@@ -1,0 +1,95 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity alu is
+    port(
+        op : in  std_logic_vector(3 downto 0);
+        i1 : in  std_logic_vector(15 downto 0);
+        i2 : in  std_logic_vector(15 downto 0);
+        o  : out std_logic_vector(15 downto 0);
+        st : out std_logic_vector(3 downto 0)
+    );
+end alu;
+
+architecture Behavioral of alu is
+begin
+    process(op, i1, i2)
+        variable res      : std_logic_vector(16 downto 0);
+        variable ca2      : std_logic_vector(16 downto 0);
+        variable amount  : integer;
+        variable zero     : boolean;
+        variable sign    : std_logic;
+        variable carry   : std_logic;
+        variable overflow : std_logic;
+    begin
+        -- Default values
+        res := (others => '0');
+        carry := '0';
+        overflow := '0';
+        
+        case op is
+            -- Logical operations
+            when "0000" => res := '0' & (i1 and i2);  -- AND
+            when "0001" => res := '0' & (i1 or i2);   -- OR
+            when "0010" => res := '0' & (i1 xor i2);  -- XOR
+            when "0011" => res := '0' & not i2;       -- NOT
+            
+            -- Arithmetic operations
+            when "0100" | "1100" =>  -- ADD
+                res := std_logic_vector(unsigned('0' & i1) + unsigned('0' & i2));
+                carry := res(16);
+                overflow := (i1(15) and i2(15) and not res(15)) or 
+                           (not i1(15) and not i2(15) and res(15));
+            
+            when "0101" | "1101" =>  -- SUB
+                ca2 := std_logic_vector(unsigned('0' & not i2) + 1);
+                res := std_logic_vector(unsigned('0' & i1) + unsigned(ca2));
+                carry := res(16);
+                overflow := (i1(15) and not i2(15) and not res(15)) or 
+                           (not i1(15) and i2(15) and res(15));
+            
+            -- Shift operations
+            when "0110" =>  -- SHL
+                amount := to_integer(signed(i2));
+                res := std_logic_vector(shift_left(unsigned('0' & i1), amount));
+                if (amount > 16 and i1 /= x"0000") or
+                   (amount <= 16 and amount > 0 and unsigned(i1(15 downto (16-amount))) /= 0) then
+                    carry := '1';
+                end if;
+                overflow := res(15) xor i1(15);
+            
+            when "0111" =>  -- SHR
+                amount := to_integer(signed(i2));
+                res := std_logic_vector(shift_right(unsigned('0' & i1), amount));
+                if (amount < 0 and abs(amount) > 16 and i1 /= x"0000") or
+                   (amount < 0 and abs(amount) <= 16 and unsigned(i1(15 downto (16+amount))) /= 0) then
+                    carry := '1';
+                end if;
+                overflow := res(15) xor i1(15);
+            
+            -- Move operations
+            when "1000" | "1010" | "1110" | "1111" => res := '0' & i2;  -- MOV from i2
+            when "1001" | "1011" => res := '0' & i1;                     -- MOV from i1
+            
+            when others => res := (others => 'Z');  -- Undefined operation
+        end case;
+        
+        -- Common status flag calculations
+        zero := res(15 downto 0) = x"0000";
+        sign := res(15);
+        
+        -- Set status flags
+        if op = "ZZZZ" then
+            st <= "ZZZZ";
+        else
+            st(3) <= '1' when zero else '0';  -- Zero flag
+            st(2) <= sign;                    -- Sign flag
+            st(1) <= carry;                   -- Carry flag
+            st(0) <= overflow;                -- Overflow flag
+        end if;
+        
+        -- Output the result
+        o <= res(15 downto 0);
+    end process;
+end Behavioral;
