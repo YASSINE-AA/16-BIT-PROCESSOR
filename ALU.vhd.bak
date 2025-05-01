@@ -1,111 +1,117 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 entity alu is
-	port (
-		op : in std_logic_vector(3 downto 0);
-		i1 : in std_logic_vector(15 downto 0);
-		i2 : in std_logic_vector(15 downto 0);
-		o  : out std_logic_vector(15 downto 0);
-		st : out std_logic_vector(3 downto 0)
-	);
-end entity;
+    port( op : in std_logic_vector(3 downto 0);
+          i1 : in std_logic_vector(15 downto 0);
+          i2 : in std_logic_vector(15 downto 0);
+          o  : out std_logic_vector(15 downto 0);
+          st : out std_logic_vector(3 downto 0));
+end alu;
 
-architecture arch of alu is
-	signal result : std_logic_vector(16 downto 0);
-	signal add, sub, lsl, lsr : std_logic := '0';
-	signal shift_carry : std_logic := '0';
+architecture Behavioral of alu is
 begin
+    process(op, i1, i2)
+        variable res    : std_logic_vector(16 downto 0) := (others => '0');
+        variable ca2    : std_logic_vector(16 downto 0) := (others => '0');
+        variable amount : integer := 0;
+    begin
+        case op is
 
-	process (op, i1, i2)
-		variable shift_amt : integer := 0;
-	begin
-		-- Reset control signals
-		sub <= '0';
-		add <= '0';
-		lsl <= '0';
-		lsr <= '0';
-		result <= (others => '0');
-		shift_carry <= '0';
-		shift_amt := to_integer(unsigned(i2(3 downto 0))); -- 4 LSBs for shift amount
+            when "0000" =>
+                res := '0' & (i1 and i2);
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
 
-		case op is
-			when "0000" => result <= '0' & (i1 and i2);                             -- AND
-			when "0001" => result <= '0' & (i1 or i2);                              -- OR
-			when "0010" => result <= '0' & (i1 xor i2);                             -- XOR
-			when "0011" => result <= '0' & (not i2);                                -- NOT
-			when "0100" =>                                                       -- ADD
-				result <= std_logic_vector(signed('0' & i1) + signed('0' & i2));
-				add <= '1';
-			when "0101" =>                                                       -- SUB
-				result <= std_logic_vector(signed('0' & i1) - signed('0' & i2));
-				sub <= '1';
-			when "0110" =>                                                       -- LSL
-				if shift_amt >= 1 and shift_amt <= 15 then
-					shift_carry <= i1(16 - shift_amt);
-				else
-					shift_carry <= '0';
-				end if;
-				result <= std_logic_vector(shift_left(signed('0' & i1), shift_amt));
-				lsl <= '1';
-			when "0111" =>                                                       -- LSR
-				if shift_amt >= 1 and shift_amt <= 15 then
-					shift_carry <= i1(shift_amt - 1);
-				else
-					shift_carry <= '0';
-				end if;
-				result <= std_logic_vector(shift_right(signed('0' & i1), shift_amt));
-				lsr <= '1';
-			when "1000" => result <= '0' & i2;
-			when "1001" => result <= '0' & i1;
-			when "1010" => result <= '0' & i2;
-			when "1011" => result <= '0' & i1;
-			when "1100" => result <= std_logic_vector(signed('0' & i1) + signed('0' & i2)); -- Redundant ADD
-			when "1101" => result <= std_logic_vector(signed('0' & i1) - signed('0' & i2)); -- Redundant SUB
-			when "1110" => result <= '0' & i2;
-			when "1111" => result <= '0' & i2;
-			when others => null;
-		end case;
-	end process;
+            when "0001" =>
+                res := '0' & (i1 or i2); st(1) <= '0'; st(0) <= '0';
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
 
-	-- Output assignment
-	o <= result(15 downto 0);
+            when "0010" =>
+                res := '0' & (i1 xor i2); st(1) <= '0'; st(0) <= '0';
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
 
-	-- Status flags
-	-- st(3): Zero
-	st(3) <= '1' when result(15 downto 0) = x"0000" else '0';
+            when "0011" =>
+                res := '0' & not i2; st(1) <= '0'; st(0) <= '0';
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
 
-	-- st(2): Negative (sign bit of result)
-	st(2) <= '1' when (signed(result(15 downto 0)) < 0) else '0';
+            when "0100" =>
+                res := std_logic_vector(unsigned('0' & i1) + unsigned('0' & i2));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                st(1) <= res(16);
+                st(0) <= (i1(15) and i2(15) and not(res(15))) or (not(i1(15)) and not(i2(15)) and res(15));
 
-	-- st(1): Carry
-	process(add, sub, lsl, lsr, result, shift_carry)
-	begin
-		if add = '1' then
-			st(1) <= result(16);
-		elsif sub = '1' then
-			st(1) <= not result(16);
-		elsif lsl = '1' or lsr = '1' then
-			st(1) <= shift_carry;
-		else
-			st(1) <= '0';
-		end if;
-	end process;
+            when "0101" =>
+                ca2 := std_logic_vector(unsigned('0' & not i2) + 1);
+                res := std_logic_vector(unsigned('0' & i1) + unsigned(ca2));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                st(1) <= res(16);
+                st(0) <= (i1(15) and not(i2(15)) and not(res(15))) or (not(i1(15)) and i2(15) and res(15));
 
-	-- st(0): Overflow
-	st(0) <= '1' when (
-		((lsl = '1' or lsr = '1') and
-			((signed(i1) < 0 and signed(result(15 downto 0)) > 0) or
-			 (signed(i1) > 0 and signed(result(15 downto 0)) < 0))) or
-		(add = '1' and
-			((signed(result(15 downto 0)) > 0 and signed(i1) < 0 and signed(i2) < 0) or
-			 (signed(result(15 downto 0)) < 0 and signed(i1) > 0 and signed(i2) > 0))) or
-		(sub = '1' and
-			((signed(result(15 downto 0)) > 0 and signed(i1) < 0 and signed(i2) > 0) or
-			 (signed(result(15 downto 0)) < 0 and signed(i1) > 0 and signed(i2) < 0)))
-	) else '0';
+            when "0110" =>
+                amount := to_integer(signed(i2));
+                res := std_logic_vector(shift_left(unsigned('0' & i1), amount));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                if (amount > 16 and i1 /= x"0000") or
+                   (amount <= 16 and amount > 0 and unsigned(i1(15 downto (16 - amount))) /= 0) then
+                    st(1) <= '1';
+                else
+                    st(1) <= '0';
+                end if;
+                st(0) <= res(15) xor i1(15);
 
-end architecture;
+            when "0111" =>
+                amount := to_integer(signed(i2));
+                res := std_logic_vector(shift_right(unsigned('0' & i1), amount));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                if (amount < 0 and abs(amount) > 16 and i1 /= x"0000") or
+                   (amount < 0 and abs(amount) <= 16 and unsigned(i1(15 downto (16 + amount))) /= 0) then
+                    st(1) <= '1';
+                else
+                    st(1) <= '0';
+                end if;
+                st(0) <= res(15) xor i1(15);
+
+            when "1000" | "1010" | "1110" | "1111" =>
+                res := '0' & i2;
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
+
+            when "1001" | "1011" =>
+                res := '0' & i1;
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15); st(1) <= '0'; st(0) <= '0';
+
+            when "1100" =>
+                res := std_logic_vector(unsigned('0' & i1) + unsigned('0' & i2));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                st(1) <= res(16);
+                st(0) <= (i1(15) and i2(15) and not(res(15))) or (not(i1(15)) and not(i2(15)) and res(15));
+
+            when "1101" =>
+                ca2 := std_logic_vector(unsigned('0' & not i2) + 1);
+                res := std_logic_vector(unsigned('0' & i1) + unsigned(ca2));
+                if res(15 downto 0) = x"0000" then st(3) <= '1'; else st(3) <= '0'; end if;
+                st(2) <= res(15);
+                st(1) <= res(16);
+                st(0) <= (i1(15) and not(i2(15)) and not(res(15))) or (not(i1(15)) and i2(15) and res(15));
+
+            when others =>
+                res := (others => 'Z'); st <= "ZZZZ";
+
+        end case;
+
+        o <= res(15 downto 0);
+    end process;
+end Behavioral;
+
 
