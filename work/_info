@@ -1,0 +1,882 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/yassine-ahmed-ali/Desktop/ALU
+Ealu
+Z0 w1746110234
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 86
+Z4 d/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR
+Z5 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALU.vhd
+Z6 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALU.vhd
+l0
+L5 1
+VcaZE?FNU6HWz2=WW6[Uzh2
+!s100 ?j7EL`e]z3H]]g5PMoi5E1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1746110242
+!i10b 1
+Z9 !s108 1746110242.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALU.vhd|
+Z11 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALU.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 caZE?FNU6HWz2=WW6[Uzh2
+!i122 86
+l14
+L13 103
+Vk2B@7aje=Q[O8fBcSBdzC2
+!s100 SoGQm:?HGoR:_So]BeaDN0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R1
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+DEx4 work 3 alu 0 22 iEOIMzlU8fbzd[P7mNA`40
+!i122 75
+l20
+L16 95
+VCb_7z0La7X55Q]R:;Z>SR2
+!s100 7Fe_WZ1k:4Rakb:bXjFGc2
+R7
+32
+!s110 1746110150
+!i10b 1
+!s108 1746110150.000000
+R10
+R11
+!i113 1
+R12
+R13
+w1746110145
+Ealu_dummy
+Z16 w1746107895
+R2
+R3
+!i122 93
+R4
+Z17 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd
+Z18 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd
+l0
+L1156 1
+Vg1X@1TkG_YhUQPa]WD5690
+!s100 @BKRoi5eP_44WA?6c[S5@0
+R7
+32
+Z19 !s110 1746110243
+!i10b 1
+Z20 !s108 1746110243.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd|
+Z22 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 9 alu_dummy 0 22 g1X@1TkG_YhUQPa]WD5690
+!i122 93
+l1168
+L1164 207
+V[gkKg>>=Uif==6i;88Zm@0
+!s100 AzXG72A2;`Y>VE0Po>Gg42
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Ealu_test
+R16
+R14
+R2
+R3
+!i122 87
+R4
+Z23 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd
+Z24 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd
+l0
+L5 1
+V@3ZzTHAQ=:dJCGSJ^o<I03
+!s100 zJ2UR06Km06XV201LWGEP2
+R7
+32
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd|
+Z26 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd|
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+DEx4 work 8 alu_test 0 22 @3ZzTHAQ=:dJCGSJ^o<I03
+!i122 87
+l26
+L8 581
+VZkE1:NgiMN4NCQIEKK`]Q3
+!s100 ji7HMc0hbCLaKkdP?kh530
+R7
+32
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Ebascule
+R16
+R1
+R14
+R15
+R2
+R3
+!i122 88
+R4
+Z27 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd
+Z28 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd
+l0
+L5 1
+VM0cLYXmR<?@8KHQ]PUf:o2
+!s100 JT_]d_H;_;RdX?>ol`5E:1
+R7
+32
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd|
+Z30 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R14
+R15
+R2
+R3
+DEx4 work 7 bascule 0 22 M0cLYXmR<?@8KHQ]PUf:o2
+!i122 88
+l14
+L12 13
+VmLZRa:U_ibGP2O2Eg6`l02
+!s100 mQ;^dMJYeH8JP5TUe4PfH0
+R7
+32
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Econtrol
+R16
+R2
+R3
+!i122 89
+R4
+Z31 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd
+Z32 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd
+l0
+L4 1
+V;ZDXWg2jIR>mW>W8N^CKH1
+!s100 jN4_?jKLk:3@zK@_DJl<h1
+R7
+32
+R8
+!i10b 1
+R9
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd|
+Z34 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 7 control 0 22 ;ZDXWg2jIR>mW>W8N^CKH1
+!i122 89
+l47
+L24 179
+VDBblP9oVQY[dNIoVE7GUS0
+!s100 c4H84d_djmjgS2o64adTk3
+R7
+32
+R8
+!i10b 1
+R9
+R33
+R34
+!i113 1
+R12
+R13
+Econtrol_dummy
+R16
+R2
+R3
+!i122 93
+R4
+R17
+R18
+l0
+L1379 1
+VjRo8_CaYa]j2[Q3iQc;IO2
+!s100 zYeb@L8ZW1NL4]NOhj6WE2
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 13 control_dummy 0 22 jRo8_CaYa]j2[Q3iQc;IO2
+!i122 93
+l1406
+L1402 293
+V^k<c[odQk4^E45>AoFh0I1
+!s100 VR4S96c@A27OfeaCh2mWQ2
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Econtrol_test
+R16
+R14
+R2
+R3
+!i122 90
+R4
+Z35 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd
+Z36 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd
+l0
+L6 1
+VzUS<6CXW2JOX>OSm?][Ik1
+!s100 HBNl2F^_X?A8DzEmMeg[H2
+R7
+32
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd|
+Z38 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd|
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+DEx4 work 12 control_test 0 22 zUS<6CXW2JOX>OSm?][Ik1
+!i122 90
+l57
+L9 402
+V[MK33`BJLIF:5CZ_?HE]D1
+!s100 4laG7_RlN7:SIITz>d7Gl0
+R7
+32
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13
+Einstr_reg
+R16
+R2
+R3
+!i122 95
+R4
+Z39 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd
+Z40 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd
+l0
+L29 1
+VbkSS628[_DEdCNhEGY@o<3
+!s100 L7BnZY6o4kI05iXkSVdUP2
+R7
+32
+R19
+!i10b 1
+R20
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd|
+Z42 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 9 instr_reg 0 22 bkSS628[_DEdCNhEGY@o<3
+!i122 95
+l43
+L42 22
+V:XTAJ;dRQB4P5L3eTiZ]G0
+!s100 zgddC`@:zKALebgooiXVo3
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Einstr_reg_dummy
+R16
+R2
+R3
+!i122 93
+R4
+R17
+R18
+l0
+L5 1
+V_0?`aXIN3dZVAU>_[5e5L0
+!s100 ]TC2hBiiQjOkTlJVH3z073
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 15 instr_reg_dummy 0 22 _0?`aXIN3dZVAU>_[5e5L0
+!i122 93
+l22
+L18 313
+VEgnBX[:hP?okmjE3=6fBo1
+!s100 mG6RTng<OX12N6Yz5gOj?1
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Einstr_reg_test
+R16
+R14
+R2
+R3
+!i122 96
+R4
+Z43 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd
+Z44 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd
+l0
+L6 1
+V]X9:eHoB92YY;_<X@^J^O2
+!s100 l7o4l:8Yj?lYU@z;2=I2;2
+R7
+32
+R19
+!i10b 1
+R20
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd|
+Z46 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd|
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+Z47 DEx4 work 14 instr_reg_test 0 22 ]X9:eHoB92YY;_<X@^J^O2
+!i122 96
+l37
+Z48 L9 145
+Z49 VG515:DI2B<I=jANboGm@W1
+Z50 !s100 n2V8jIXl]`TL=??KZZB3L2
+R7
+32
+R19
+!i10b 1
+R20
+R45
+R46
+!i113 1
+R12
+R13
+Emux_1
+R16
+R2
+R3
+!i122 91
+R4
+Z51 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd
+Z52 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd
+l0
+L4 1
+VT3fFm[71hA;4SOaF:cg3i1
+!s100 YY`=z>[hTTcL@JXW^H@b[2
+R7
+32
+R19
+!i10b 1
+R9
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd|
+Z54 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 5 mux_1 0 22 T3fFm[71hA;4SOaF:cg3i1
+!i122 91
+l12
+L11 7
+V:7Zkmdk1HZ<8GJ11T;cIk0
+!s100 >N>E55ZbOSg=5dN2;HN?m1
+R7
+32
+R19
+!i10b 1
+R9
+R53
+R54
+!i113 1
+R12
+R13
+Emux_2
+R16
+R2
+R3
+!i122 92
+R4
+Z55 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd
+Z56 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd
+l0
+L3 1
+Vf<mC8I==WzT?FbJ6o]7Gh0
+!s100 0FC=XWAm`zD6eY::FA;8?1
+R7
+32
+R19
+!i10b 1
+R20
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd|
+Z58 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 5 mux_2 0 22 f<mC8I==WzT?FbJ6o]7Gh0
+!i122 92
+l11
+L10 8
+VXhIAc9^5G^>?zT>XB:iH01
+!s100 aFbYW?eo?T1WWjof>DjbP3
+R7
+32
+R19
+!i10b 1
+R20
+R57
+R58
+!i113 1
+R12
+R13
+Eproc
+R16
+R1
+R14
+R15
+R2
+R3
+!i122 94
+R4
+Z59 8/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd
+Z60 F/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd
+l0
+L5 1
+VkC:YMK]Nf:a^FB6dPk<Fl1
+!s100 VKHfbUGB>l7?3@L6z3cN]1
+R7
+32
+R19
+!i10b 1
+R20
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd|
+Z62 !s107 /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R14
+R15
+R2
+R3
+DEx4 work 4 proc 0 22 kC:YMK]Nf:a^FB6dPk<Fl1
+!i122 94
+l109
+L15 114
+VJYPSbd75`N=b1>;Dd2hS80
+!s100 RIADKPJ^f`VmP@l086ooW1
+R7
+32
+R19
+!i10b 1
+R20
+R61
+R62
+!i113 1
+R12
+R13
+Eproc_test
+R16
+R14
+R2
+R3
+!i122 93
+R4
+R17
+R18
+l0
+L1704 1
+VCoj1e4BknhYhm?_8I2X`l2
+!s100 k45N2zSg[k>^]7[8NO7ha3
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+DEx4 work 9 proc_test 0 22 Coj1e4BknhYhm?_8I2X`l2
+!i122 93
+l1729
+L1707 297
+VZfX[C2<Z1EL11i3=7GKBi2
+!s100 J4oYa1k?;_cXFWP3^H7JY1
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Ereg_file
+R16
+R1
+R2
+R3
+!i122 95
+R4
+R39
+R40
+l0
+L147 1
+V857HDBdPXX;hhBecaHaae0
+!s100 SlHOgBYlhbZ^QQT6J>2:z1
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 8 reg_file 0 22 857HDBdPXX;hhBecaHaae0
+!i122 95
+l168
+L165 30
+V<Hm=d9AnlCzl[0edKhn[Q2
+!s100 <=590K477zA05:mY_jI3D1
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Ereg_file_dummy
+R16
+R2
+R3
+!i122 93
+R4
+R17
+R18
+l0
+L652 1
+VMU^4[Lk7@Dg5bkLXT7Pk80
+!s100 P_RJ;2eZX76S?T;Vgk[:i0
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 14 reg_file_dummy 0 22 MU^4[Lk7@Dg5bkLXT7Pk80
+!i122 93
+l674
+L670 478
+VB^Gae7?4FZ02KELCnd9Gk3
+!s100 ;k40f5>a5CUY_zHL;]`o<3
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Ereg_file_test
+R16
+R14
+R2
+R3
+!i122 96
+R4
+R43
+R44
+l0
+L284 1
+VWmkMCHi[COUKEje?YzZT^1
+!s100 KLdo^NWc66?MLMgH^Pidl0
+R7
+32
+R19
+!i10b 1
+R20
+R45
+R46
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+Z63 DEx4 work 13 reg_file_test 0 22 WmkMCHi[COUKEje?YzZT^1
+!i122 96
+l325
+Z64 L287 400
+Z65 VO]Z2@n>L[?WL6]>O3G[=f1
+Z66 !s100 AN;;8nkWCMX2>;O<n7CDo3
+R7
+32
+R19
+!i10b 1
+R20
+R45
+R46
+!i113 1
+R12
+R13
+Estatus_reg
+R16
+R2
+R3
+!i122 95
+R4
+R39
+R40
+l0
+L85 1
+VUj1@S6ZV<TC1Jg=^FzlId0
+!s100 =W_e106n^c3:k[di537SA2
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 10 status_reg 0 22 Uj1@S6ZV<TC1Jg=^FzlId0
+!i122 95
+l95
+L94 13
+Va9dTU0fP5b3V:cNBP7eIo0
+!s100 `hbFSeJdn>==d7Y>E`F^42
+R7
+32
+R19
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R12
+R13
+Estatus_reg_dummy
+R16
+R2
+R3
+!i122 93
+R4
+R17
+R18
+l0
+L339 1
+V>]F]J;Y>9iloo[VP^YJEY0
+!s100 HY;j6BM789:VQj8eBdN>m2
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+DEx4 work 16 status_reg_dummy 0 22 >]F]J;Y>9iloo[VP^YJEY0
+!i122 93
+l352
+L348 296
+VbYN:K0Y`;@3lNNz]J5zMe2
+!s100 bZo6l5>CQc6UCY9d;[>j42
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Estatus_reg_test
+R16
+R14
+R2
+R3
+!i122 96
+R4
+R43
+R44
+l0
+L163 1
+V<;TmmY>FR;?c:EJjKmi?F0
+!s100 FJRlb]EA3?G0j3ikWSb=A3
+R7
+32
+R19
+!i10b 1
+R20
+R45
+R46
+!i113 1
+R12
+R13
+Aarch
+R14
+R2
+R3
+Z67 DEx4 work 15 status_reg_test 0 22 <;TmmY>FR;?c:EJjKmi?F0
+!i122 96
+l186
+Z68 L166 109
+Z69 VSXnYTT6kQ=8=6=fNiUAmN1
+Z70 !s100 86GHoCJ_8kHY=DIacZdNR1
+R7
+32
+R19
+!i10b 1
+R20
+R45
+R46
+!i113 1
+R12
+R13

@@ -1,0 +1,110 @@
+/home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Processeur.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity proc
+-- Compiling architecture arch of proc
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/proc_test.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity instr_reg_dummy
+-- Compiling architecture arch of instr_reg_dummy
+-- Compiling entity status_reg_dummy
+-- Compiling architecture arch of status_reg_dummy
+-- Compiling entity reg_file_dummy
+-- Compiling architecture arch of reg_file_dummy
+-- Compiling entity alu_dummy
+-- Compiling architecture arch of alu_dummy
+-- Compiling entity control_dummy
+-- Compiling architecture arch of control_dummy
+-- Loading package std_logic_arith
+-- Compiling entity proc_test
+-- Compiling architecture arch of proc_test
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_1
+-- Compiling architecture arch of mux_1
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/bascule.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule
+-- Compiling architecture arch of bascule
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Mux2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux_2
+-- Compiling architecture arch of mux_2
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/RegisterTest.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity instr_reg_test
+-- Compiling architecture arch of instr_reg_test
+-- Compiling entity status_reg_test
+-- Compiling architecture arch of status_reg_test
+-- Compiling entity reg_file_test
+-- Compiling architecture arch of reg_file_test
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Register.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity instr_reg
+-- Compiling architecture arch of instr_reg
+-- Compiling entity status_reg
+-- Compiling architecture arch of status_reg
+-- Loading package NUMERIC_STD
+-- Compiling entity reg_file
+-- Compiling architecture arch of reg_file
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/controlTest.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity control_test
+-- Compiling architecture arch of control_test
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/Control.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control
+-- Compiling architecture arch of control
+
+} {} {}} /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/yassine-ahmed-ali/Documents/16-BIT-PROCESSOR/ALUtest.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity alu_test
+-- Compiling architecture arch of alu_test
+
+} {} {}}
